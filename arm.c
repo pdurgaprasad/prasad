@@ -1,16 +1,20 @@
 #include <stdio.h>
 int main()
 {
-    int n=56, reversedNumber = 0, remainder;
+      double firstNumber=2, secondNumber=3, temporaryVariable;
 
-    while(n != 0)
-    {
-        remainder = n%10;
-        reversedNumber = reversedNumber*10 + remainder;
-        n /= 10;
-    }
 
-    printf("Reversed Number = %d", reversedNumber);
+      // Value of firstNumber is assigned to temporaryVariable
+      temporaryVariable = firstNumber;
 
-    return 0;
+      // Value of secondNumber is assigned to firstNumber
+      firstNumber = secondNumber;
+
+      // Value of temporaryVariable (which contains the initial value of firstNumber) is assigned to secondNumber
+      secondNumber = temporaryVariable;
+
+      printf("\nAfter swapping, firstNumber = %.2lf\n", firstNumber);
+      printf("After swapping, secondNumber = %.2lf", secondNumber);
+
+      return 0;
 }
